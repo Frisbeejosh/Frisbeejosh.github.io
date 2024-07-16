@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2024-07-15 21:49:37-0400
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+woooo! welcome to my personal website! stay tuned as I continue to update the website with information along my academic and research journey. 
