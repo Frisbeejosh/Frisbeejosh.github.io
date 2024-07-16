@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Evolutionary relationships in <i>Catopsis</i>
-description: with background image
+description: 
 img: assets/img/catopsis.jpeg
 importance: 1
 category: current
