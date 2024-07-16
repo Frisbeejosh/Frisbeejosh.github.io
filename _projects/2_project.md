@@ -4,7 +4,7 @@ title: Shutterbee Citizen Science Program
 description: 
 img: assets/img/shutterbee.png
 importance: 2
-category: work
+category: previous
 giscus_comments: true
 ---
 
