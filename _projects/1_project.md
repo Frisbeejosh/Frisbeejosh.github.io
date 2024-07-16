@@ -2,9 +2,9 @@
 layout: page
 title: Evolutionary relationships in <i>Catopsis</i>
 description: with background image
-img: assets/img/12.jpg
+img: assets/img/catopsis.jpeg
 importance: 1
-category: work
+category: current
 related_publications: false
 ---
 
