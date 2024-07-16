@@ -2,7 +2,7 @@
   type: map
   contents:
     - name: Full Name
-      value: Joshua M. FElton
+      value: Joshua M. Felton
 
 - title: Education
   type: time_table
@@ -12,25 +12,23 @@
       year:
       description:
         - Plant Biology Section
-       - title: B.A.
+    - title: B.A.
       institution: Colorado College
       year: 2022
       description:
         - Distinction in Organismal Biology and Ecology
-  
 
 - title: Experience
   type: time_table
   contents:
     - title: Paraprofessional
-      institution: Organismal Biology and Ecology Department, Colorado COllege
+      institution: Organismal Biology and Ecology Department, Colorado College
       year: 2022 - 2023
       description:
         - Worked closely with faculty and staff members in the preparation and instruction of biology classes. Assisted in conducting lectures, discussions, and laboratory sessions. Helped grade examinations and other written work.
-        
     - title: Research Assistant
-          contents:
-            - Collected morphological data on vegetative and reproductive structures of Dr. Jabaily’s research plants.
+      description:
+        - Collected morphological data on vegetative and reproductive structures of Dr. Jabaily’s research plants.
     - title: Research Student
       institution: Missouri Botanical Garden REU in Plant Systematics, Conservation Biology, and Ethnobotany
       year: 2022
@@ -47,10 +45,11 @@
       items:
         - Colorado College Mary Alice Hamilton Award
         - Botanical Society of America Young Botanist Award
-- year: 2022
+    - year: 2022
       items:
         - Colorado College Jason Wilkes Memorial Prize
-        - Colorado College Deans list
+        - Colorado College Dean's List
+
 - title: Other Interests
   type: list
   contents:
