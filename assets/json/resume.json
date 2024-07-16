@@ -37,7 +37,7 @@
     "area": "Distinction in Organsimal Biology and Ecology",
     "studyType": "Bachelor",
     "startDate": "2018-08-01",
-    "endDate": "2022-05-023",
+    "endDate": "2022-05-23",
     "score": "3.53",
     "courses": [
       "DB1101 - Basic SQL"
@@ -72,7 +72,8 @@
   "interests": [{
     "name": "Evolutionary Biology",
     "keywords": [
-      "breeding system evoltuion",
+      "breeding system evolution",
       "urban evolutionary ecology"
     ]
   }]
+}
