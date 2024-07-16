@@ -1,32 +1,21 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Shutterbee Citizen Science Program
+description: 
+img: assets/img/shutterbee.png
 importance: 2
 category: work
 giscus_comments: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
-
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+The Shutterbee Citizen Science Program was a collaborative effort among scientists and volunteers to monitor the bees in the St. Louis metropolitan area of Missouri and Illinois. In addition to being beautiful, amazing creatures, bees play a critical role in our world as pollinators of our crops and plants that serve as food for birds and other wildlife. The project's primary goal was to understand better what promotes bee diversity and bee-plant interactions in residential and community gardens whilst increasing insect and plant awareness through our passion for bee conservation.   
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/shutterbee_locations.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
