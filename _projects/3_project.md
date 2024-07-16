@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Shutterbee Citizen Science Program
-description:
+description: ''
 img: assets/img/shutterbee.png
-redirect: [https://unsplash.com](https://shutterbee.net/)
+redirect: https://shutterbee.net/
 importance: 3
 category: previous
 ---
