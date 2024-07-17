@@ -16,18 +16,18 @@ Catopsis Griseb. is an epiphytic genus in the subfamily Tillandsioideae. The cen
         {% include figure.liquid loading="eager" path="assets/img/catopsis_berteroniana.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/catopsis_nutans.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/catopsis_sessiflora.jpeg" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Left _Catopsis berteroniana_ (c) Don Filipiak. 
+    Left <i>Catopsis berteroniana</i>(Schult. & Schult.f.) Mez (c) Don Filipiak. <i>Catopis nutans</i>(Swartz) Grisebach (c) Joseph S. Vega C. <I>Catopsis sessiliflora</I> (Ruiz & Pavón) Mez (c) Apipa
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/backup_catopsis.png" title="Catopsis distribution" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/catopsis_distribution.png" title="Catopsis distribution" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
