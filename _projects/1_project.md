@@ -8,18 +8,8 @@ category: current
 related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+Catopsis Griseb. is an epiphytic genus in the subfamily Tillandsioideae. The center of diversity for the genus is Mexico, albeit, the genus can be found in the Caribbean, Central America, and the Brazilian shield of South America. Catopsis is one of the few bromeliad lineages that have diclinous species; dioecy in Bromeliaceae has only been noted elsewhere in the family in Hechtia Klotzsch (Hechtioideae), the monotypic Androlepis skinneri (K.Koch) Brongn. ex Houllet (Bromelioideae) and Aechmea mariae-reginae H.Wendl. (Bromelioideae). Interestingly, the center for diversity for Hechtia is also in Mexico, and the two Bromelioideae species are found in Central America (Benzing, 2000). Little is known however, as dioecious bromeliads have been mostly neglected in studies of genetic diversity and reproductive biology, other than the few cited studies (Ramírez-Morillo et al., 2005, Cascante-Marín et al., 2020). 
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -37,11 +27,11 @@ To give your project a background in the portfolio page, just add the img tag to
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/backup_catopsis.png" title="Catopsis distribution" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    _Catopsis_ distribution from cleaned GBIF records accessed June 2024
 </div>
 
 You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
