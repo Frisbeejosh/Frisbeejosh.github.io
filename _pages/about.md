@@ -33,16 +33,13 @@ social: true # includes social icons at the bottom of the page
 .inat-observation-image, .inat-user-image { width: 48px; display: inline-block; }
 .inat-observation-image img, .inat-user-image img { max-width: 48px; }
 .inat-observation-image img { vertical-align: middle; }
-.inat-widget-small .inat-observation-image { display:block; float: left; margin: 0 3px 3px 0; height:48px;}
+.inat-widget-small .inat-observation-image { display:block; float: left; margin: 0 3px 3px 0; height:72px;}
 .inat-label, .inat-value, .inat-user { font-family: "Trebuchet MS", Arial, sans-serif; }
 .inat-user-body {vertical-align: middle;}
 .inat-widget td.inat-user-body {vertical-align: middle;}
 .inat-widget .inat-footer td.inat-value {vertical-align: middle; padding-left: 10px;}
 </style>
 <div class="inat-widget">
-    <div class="inat-widget-header">
-      <a href="https://www.inaturalist.org"><img alt="iNaturalist" src="https://www.inaturalist.org/assets/logo-small.png" /></a>  
-    </div>
   <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/josh_felton.widget?layout=large&limit=5&order=desc&order_by=observed_on"></script>
   <table class="inat-footer">
     <tr class="inat-user">
@@ -58,6 +55,6 @@ social: true # includes social icons at the bottom of the page
   </table>
 </div>
   <div style="flex: 1; padding: 20px;">
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0xH1RwmBILEqvDpouq4o0T?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0xH1RwmBILEqvDpouq4o0T?utm_source=generator" width="100%" height="340" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
 </div>
