@@ -55,6 +55,6 @@ social: true # includes social icons at the bottom of the page
   </table>
 </div>
   <div style="flex: 1; padding: 20px;">
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0xH1RwmBILEqvDpouq4o0T?utm_source=generator" width="100%" height="340" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0xH1RwmBILEqvDpouq4o0T?utm_source=generator" width="100%" height="500" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
 </div>
