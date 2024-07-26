@@ -17,9 +17,10 @@ nav_order: 7
 <div class="caption">
     field botany guest lecture june 2023
 </div>
+---
+***
 
-
-#I have had the pleasure of being on the podcast <a href="https://www.rootboundpodcast.com/">rootbound</a> twice! check them out below. <br>
+# I have had the pleasure of being on the podcast <a href="https://www.rootboundpodcast.com/">rootbound</a> twice! check them out below. <br>
 
 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/3KSHwRFfk9nl3wPY0wfRCT?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> <br><br><br>
 
