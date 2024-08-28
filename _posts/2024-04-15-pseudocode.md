@@ -1,71 +1,97 @@
 ---
 layout: post
-title: a post with pseudo code
-date: 2024-04-15 00:01:00
-description: this is what included pseudo code could look like
-tags: formatting code
-categories: sample-posts
-pseudocode: true
+title: finding my flow with markdown
+date: 2024-08-28 13:00:00
+description: inch my inch, row by row, gonna make my coding flow
+tags: coding
+categories: 
+featured: true
 ---
 
-This is an example post with some pseudo code rendered by [pseudocode](https://github.com/SaswatPadhi/pseudocode.js). The example presented here is the same as the one in the [pseudocode.js](https://saswat.padhi.me/pseudocode.js/) documentation, with only one simple but important change: everytime you would use `$`, you should use `$$` instead. Also, note that the `pseudocode` key in the front matter is set to `true` to enable the rendering of pseudo code. As an example, using this code:
+# finding my flow with markdown
 
-````markdown
-```pseudocode
-% This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\PROCEDURE{Quicksort}{$$A, p, r$$}
-    \IF{$$p < r$$}
-        \STATE $$q = $$ \CALL{Partition}{$$A, p, r$$}
-        \STATE \CALL{Quicksort}{$$A, p, q - 1$$}
-        \STATE \CALL{Quicksort}{$$A, q + 1, r$$}
-    \ENDIF
-\ENDPROCEDURE
-\PROCEDURE{Partition}{$$A, p, r$$}
-    \STATE $$x = A[r]$$
-    \STATE $$i = p - 1$$
-    \FOR{$$j = p$$ \TO $$r - 1$$}
-        \IF{$$A[j] < x$$}
-            \STATE $$i = i + 1$$
-            \STATE exchange
-            $$A[i]$$ with $$A[j]$$
-        \ENDIF
-        \STATE exchange $$A[i]$$ with $$A[r]$$
-    \ENDFOR
-\ENDPROCEDURE
-\end{algorithmic}
-\end{algorithm}
+I am in the class [Collaborative and Reproducible Data Science in R](https://github.com/nt246/NTRES-6100-data-science/tree/main) this semester and thought it would be great to practice some of the skills I am learning in the class by adding more content to my website  
+
+I hope that this will help me progress with my coding/programming skills while providing me with material to look back on during my journey.  
+
+Check out this plot that I made in R to help me compare the proportion of SNPs retained before and after filtering for LD.
+```{r echo=FALSE}
+library(ggplot2)
+library(readr)
+
+# Load the data from the CSV file
+data <- read_csv("/Users/joshfelton/Desktop/tests/snps_filtered_test.csv", show_col_types = FALSE)
+
+
+# Define custom colors for each dataset
+custom_colors <- c(
+  "A353_gene" = "#1f77b4",   # Blue
+  "A353_super" = "#aec7e8",  # Light Blue
+  "BUSCO" = "#2ca02c",       # Green
+  "BUSCOsuper" = "#98df8a",  # Light Green
+  "singlecopy" = "#d62728",  # Red
+  "SC_super" = "#ff9896",    # Light Red
+  "genome" = "#9467bd"       # Purple
+)
+
+# Create the faceted bar plot with custom colors
+ggplot(data, aes(x = dataset, y = proportion, fill = dataset)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~ organism, scales = "free_y") +
+  scale_fill_manual(values = custom_colors) +
+  theme_minimal() +
+  labs(title = "Comparison of SNPs Proportion Retained After Filtering",
+       x = "Dataset",
+       y = "Proportion of SNPs Retained") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 14),  # Increase x-axis text size
+    axis.text.y = element_text(size = 16),                        # Increase y-axis text size
+    axis.title.x = element_text(size = 16),                       # Increase x-axis title size
+    axis.title.y = element_text(size = 16),                       # Increase y-axis title size
+    strip.text = element_text(size = 14),                         # Increase facet labels size
+    plot.title = element_text(size = 0, hjust = 0.5)             # Increase plot title size and center it
+  )
 ```
-````
+<br>
+if you are wondering what the script looks like, check it out below!  
 
-Generates:
+```{r eval=FALSE}
+library(ggplot2)
+library(readr)
 
-```pseudocode
-% This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
-\begin{algorithm}
-\caption{Quicksort}
-\begin{algorithmic}
-\PROCEDURE{Quicksort}{$$A, p, r$$}
-    \IF{$$p < r$$}
-        \STATE $$q = $$ \CALL{Partition}{$$A, p, r$$}
-        \STATE \CALL{Quicksort}{$$A, p, q - 1$$}
-        \STATE \CALL{Quicksort}{$$A, q + 1, r$$}
-    \ENDIF
-\ENDPROCEDURE
-\PROCEDURE{Partition}{$$A, p, r$$}
-    \STATE $$x = A[r]$$
-    \STATE $$i = p - 1$$
-    \FOR{$$j = p$$ \TO $$r - 1$$}
-        \IF{$$A[j] < x$$}
-            \STATE $$i = i + 1$$
-            \STATE exchange
-            $$A[i]$$ with $$A[j]$$
-        \ENDIF
-        \STATE exchange $$A[i]$$ with $$A[r]$$
-    \ENDFOR
-\ENDPROCEDURE
-\end{algorithmic}
-\end{algorithm}
+# Load the data from the CSV file
+data <- read_csv("/Users/joshfelton/Desktop/tests/snps_filtered_test.csv")
+
+# Define custom colors for each dataset
+custom_colors <- c(
+  "A353_gene" = "#1f77b4",   # Blue
+  "A353_super" = "#aec7e8",  # Light Blue
+  "BUSCO" = "#2ca02c",       # Green
+  "BUSCOsuper" = "#98df8a",  # Light Green
+  "singlecopy" = "#d62728",  # Red
+  "SC_super" = "#ff9896",    # Light Red
+  "genome" = "#9467bd"       # Purple
+)
+
+# Create the faceted bar plot with custom colors
+ggplot(data, aes(x = dataset, y = proportion, fill = dataset)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~ organism, scales = "free_y") +
+  scale_fill_manual(values = custom_colors) +
+  theme_minimal() +
+  labs(title = "Comparison of SNPs Proportion Retained After Filtering",
+       x = "Dataset",
+       y = "Proportion of SNPs Retained") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1, size = 14),  # Increase x-axis text size
+    axis.text.y = element_text(size = 16),                        # Increase y-axis text size
+    axis.title.x = element_text(size = 16),                       # Increase x-axis title size
+    axis.title.y = element_text(size = 16),                       # Increase y-axis title size
+    strip.text = element_text(size = 14),                         # Increase facet labels size
+    plot.title = element_text(size = 0, hjust = 0.5)             # Increase plot title size and center it
+  )
 ```
+<br>
+
+obviously, the script still needs some modification, and I need to add more data, but I must say, I really like sharing results and figures through markdown!
+
