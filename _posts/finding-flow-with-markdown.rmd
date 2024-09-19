@@ -6,6 +6,7 @@ description: inch my inch, row by row, gonna make my coding flow
 tags: coding
 categories: 
 featured: true
+related_posts: false
 ---
 
 # finding my flow with markdown
