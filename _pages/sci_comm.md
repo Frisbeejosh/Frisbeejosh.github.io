@@ -11,7 +11,7 @@ nav_order: 7
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/guest_lecture.JPG" title="teaching" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/flynnstone_bb.JPG" title="the one and only [flynnstone](https://youtube.com/@flynnstone5850?si=UYS6ff63h6u8YAG1)" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
