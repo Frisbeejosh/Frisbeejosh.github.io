@@ -11,4 +11,7 @@ children:
   - title: divider
   - title: josh's github
     permalink: https://github.com/Frisbeejosh/
+  - title: divider
+  - title: specht lab
+    permalink: https://blogs.cornell.edu/specht/
 ---
