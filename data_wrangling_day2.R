@@ -1,11 +1,3 @@
----
-layout: post
-title: a post with audios
-date: 2023-09-19 11:26:00
-description: day two of data wrangling
-related_posts: false
----
-```{r}
 #reading in a new file from the coronavirus dataset
 library(skimr) #install.packages("skimr")
 
@@ -69,4 +61,5 @@ coronavirus |>
   group_by(date,type) |> 
   summarise(total = sum(cases), n=n()) |> 
   filter(date == "2020-01-23")
-```
+
+
