@@ -17,7 +17,7 @@ news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-<p style="font-size: 20px;">plant evolutionary biologist in the <a href="https://blogs.cornell.edu/specht/" target="_blank">specht lab</a>. I am interested in reproductive biology and use Bromeliaceae as a model group to ask evolutionary questions.</p><br>
+<p style="font-size: 20px;">plant evolutionary biologist in the <a href="https://blogs.cornell.edu/specht/" target="_blank">specht lab</a>. I am interested in reproductive biology and use the Neotropical plant family Bromeliaceae to ask evolutionary questions.</p><br>
 <p style="font-size: 20px;">feel free to explore my website using the links above, and don't forget to connect with me through social media or my email (jmf425@cornell.edu)</p><br>
 <p style="font-size: 20px;">check out my featured iNaturalist and spotify observation and playlist</p><br>
 
