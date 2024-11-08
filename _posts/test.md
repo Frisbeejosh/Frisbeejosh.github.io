@@ -1,8 +1,7 @@
 ---
 layout: post
-title: day 2 of NTRES-6100
-date: 2024-08-29 12:03:00
-description: day 2 of NTRES-6100
-tags: class
+title: hello why is this so hard
+date: 2024-11-7 12:03:00
+description: i just want to add a interactive plot
 related_posts: false
 ---
