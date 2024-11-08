@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://frisbeejosh.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://frisbeejosh.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-11-08T03:39:37+00:00</updated><id>https://frisbeejosh.github.io/feed.xml</id><title type="html">Josh Felton</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">i dont even know what day im in for NTRESS6000</title><link href="https://frisbeejosh.github.io/blog/2024/echarts/" rel="alternate" type="text/html" title="i dont even know what day im in for NTRESS6000"/><published>2024-09-17T16:03:00+00:00</published><updated>2024-09-17T16:03:00+00:00</updated><id>https://frisbeejosh.github.io/blog/2024/echarts</id><content type="html" xml:base="https://frisbeejosh.github.io/blog/2024/echarts/"><![CDATA[<p><strong>today we are talking about data wrangling</strong></p> <p>this is the r package ill be using <code class="language-plaintext highlighter-rouge">coronavirus</code></p> <ul> <li>ive done alot the past day on data wrangling, below is my working document from the day: <br/></li> </ul> <pre><code class="language-{r}">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://frisbeejosh.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://frisbeejosh.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2024-11-08T03:41:18+00:00</updated><id>https://frisbeejosh.github.io/feed.xml</id><title type="html">Josh Felton</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">Catopsis nutans iNat &amp;amp; herbarium voucher occurances</title><link href="https://frisbeejosh.github.io/blog/2024/cnut/" rel="alternate" type="text/html" title="Catopsis nutans iNat &amp;amp; herbarium voucher occurances"/><published>2024-11-07T00:00:00+00:00</published><updated>2024-11-07T00:00:00+00:00</updated><id>https://frisbeejosh.github.io/blog/2024/cnut</id><content type="html" xml:base="https://frisbeejosh.github.io/blog/2024/cnut/"><![CDATA[<h4 id="catopsis-nutans-occurances-from-1980-to-present-accessed-on-gbif-11524"><i>Catopsis nutans</i> occurances from 1980 to present. Accessed on GBIF 11/5/24</h4> <div style="padding: 10px; background-color: #f0f8ff; border-left: 4px solid #008080;"> <strong>GBIF.org (5 November 2024). <a href="https://doi.org/10.15468/dl.ryeqr9" target="_blank">GBIF Occurrence Download</a></strong> </div> <iframe src="/assets/html/nutans_herb_inat.html" width="100%" height="800px"></iframe>]]></content><author><name></name></author><summary type="html"><![CDATA[Catopsis nutans occurances from 1980 to present. Accessed on GBIF 11/5/24]]></summary></entry><entry><title type="html">i dont even know what day im in for NTRESS6000</title><link href="https://frisbeejosh.github.io/blog/2024/echarts/" rel="alternate" type="text/html" title="i dont even know what day im in for NTRESS6000"/><published>2024-09-17T16:03:00+00:00</published><updated>2024-09-17T16:03:00+00:00</updated><id>https://frisbeejosh.github.io/blog/2024/echarts</id><content type="html" xml:base="https://frisbeejosh.github.io/blog/2024/echarts/"><![CDATA[<p><strong>today we are talking about data wrangling</strong></p> <p>this is the r package ill be using <code class="language-plaintext highlighter-rouge">coronavirus</code></p> <ul> <li>ive done alot the past day on data wrangling, below is my working document from the day: <br/></li> </ul> <pre><code class="language-{r}">
 library(tidyverse)
 library(skimr) # install.packages("skimr")
 
@@ -292,67 +292,4 @@ ggplot(data, aes(x = dataset, y = proportion, fill = dataset)) +
   },
   "options": {}
 }
-</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included chart.js code could look like]]></summary></entry><entry><title type="html">a post with audios</title><link href="https://frisbeejosh.github.io/blog/2023/audios/" rel="alternate" type="text/html" title="a post with audios"/><published>2023-09-19T11:26:00+00:00</published><updated>2023-09-19T11:26:00+00:00</updated><id>https://frisbeejosh.github.io/blog/2023/audios</id><content type="html" xml:base="https://frisbeejosh.github.io/blog/2023/audios/"><![CDATA[<pre><code class="language-{r}">#reading in a new file from the coronavirus dataset
-library(skimr) #install.packages("skimr")
-
-
-vacc &lt;- read_csv("https://raw.githubusercontent.com/RamiKrispin/coronavirus/main/csv/covid19_vaccine.csv")
-
-View(vacc)
-
-#allows you to get some solid info about the data
-skim(vacc)
-
-max(vacc$date)
-
-vacc |&gt; 
-  filter(date == max(date)) |&gt;
-  select(country_region, continent_name,people_at_least_one_dose,population) |&gt;
-  mutate(vaxxrate = people_at_least_one_dose /population )
-
-##if i want to round 
-vacc |&gt; 
-  filter(date == max(date)) |&gt;
-  select(country_region, continent_name,people_at_least_one_dose,population) |&gt;
-  mutate(vaxxrate = round(people_at_least_one_dose /population,2))
-
-vacc |&gt; 
-  filter(date == max(date)) |&gt;
-  select(country_region,doses_admin,population,people_at_least_one_dose) |&gt; 
-  mutate(avg_doses = doses_admin/people_at_least_one_dose, .before = 1) |&gt; 
-  ggplot() +
-  geom_histogram(aes(x = avg_doses))
-
-
-##arrange will allow us to sort by certain variable
-## you can use desc() to have the variable be sorted in descending order
-vacc |&gt; 
-  filter(date == max(date)) |&gt;
-  select(country_region,doses_admin,population,people_at_least_one_dose) |&gt; 
-  mutate(avg_doses = doses_admin/people_at_least_one_dose, .before = 1) |&gt; 
-  arrange(desc(avg_doses))
-
-##summarize
-coronavirus |&gt; 
-  filter(type=="confirmed") |&gt; 
-  summarise(total = sum(cases))
-
-##summarize but grouping by the country 
-coronavirus |&gt; 
-  filter(type=="confirmed") |&gt; 
-  group_by(country) |&gt; 
-  summarise(total = sum(cases))
-
-#gives us the count for the number of lines - good idea to do to keep a track of records
-coronavirus |&gt; 
-  filter(type=="confirmed") |&gt; 
-  group_by(country) |&gt; 
-  summarise(total = sum(cases), n=n())
-
-
-#if we want to see by certain date how many cases and by type
-coronavirus |&gt; 
-  group_by(date,type) |&gt; 
-  summarise(total = sum(cases), n=n()) |&gt; 
-  filter(date == "2020-01-23")
-</code></pre>]]></content><author><name></name></author><summary type="html"><![CDATA[day two of data wrangling]]></summary></entry></feed>
+</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included chart.js code could look like]]></summary></entry></feed>
