@@ -4,23 +4,24 @@ navbar:
   title: "josh felton"                             # CHANGE HERE 
   type: inverse
   left:
-    - text: "Home"
+    - text: "home"
       icon: fa-home
       href: index.html
-    - text: "About"
+    - text: "about"
       icon: fa-user 
       href: about.html
-    - text: "CV"
-      icon: fa-file-pdf-o
-      href: cv.html
-    - text: "Blog"
+    - text: "projects"
+      href: projects.html
+    - text: "sci-comm"
+      href: scicomm.html
+    - text: "blog"
       icon: fa-rss
       href: https://Frisbeejosh.github.io/blog/  # CHANGE HERE OR DELETE ALL 3 LINES 
   right:
-    - text: "Contact me"
+    - text: "contact me"
       icon: fa-envelope-o
       href: mailto:jmf425@cornell.edu                    # CHANGE HERE 
-    - text: "GitHub"
+    - text: "github"
       icon: fa-github
       href: https://github.com/Frisbeejosh       # CHANGE HERE 
 output:
