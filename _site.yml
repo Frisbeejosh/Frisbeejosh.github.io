@@ -10,8 +10,14 @@ navbar:
     - text: "about"
       icon: fa-user 
       href: about.html
-    - text: "projects"
-      href: projects.html
+    - text: "research"
+      menu:
+        - text: "catopsis"
+          href: catopsis.html
+        - text: "Project 2"
+          href: project2.html
+        - text: "Project 3"
+          href: project3.html
     - text: "sci-comm"
       href: scicomm.html
     - text: "blog"
@@ -26,5 +32,5 @@ navbar:
       href: https://github.com/Frisbeejosh       # CHANGE HERE 
 output:
   html_document:
-    theme: cosmo
+    theme: tufte::tufte_html
     highlight: textmate
