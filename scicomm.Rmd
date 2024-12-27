@@ -1,6 +1,4 @@
----
-output: tufte::tufte_html 
----
+
 ![flynnstone dapped me up!!!](img/flynnstone_bb.JPG "the one and only [flynnstone](https://youtube.com/@flynnstone5850?si=UYS6ff63h6u8YAG1)")
 
 ---

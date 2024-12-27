@@ -1,6 +1,5 @@
 ---
 title: "About me"
-output: tufte::tufte_html 
 ---
 
 <p style="font-size: 20px;">plant evolutionary biologist in the <a href="https://blogs.cornell.edu/specht/" target="_blank">specht lab</a>. I am interested in reproductive biology and use the Neotropical family Bromeliaceae to ask evolutionary questions.</p><br>
