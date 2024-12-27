@@ -1,6 +1,6 @@
 ---
 title: "Welcome to my website!"
-output: tufte::tufte_html
+output: tufte::tufte_html 
 ---
 
 
