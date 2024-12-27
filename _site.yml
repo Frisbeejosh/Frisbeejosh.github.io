@@ -31,5 +31,5 @@ navbar:
       icon: fa-github
       href: https://github.com/Frisbeejosh       # CHANGE HERE 
 output:
-  tufte::tufte_html:
+  tufte::tufte_html: default
     highlight: textmate
