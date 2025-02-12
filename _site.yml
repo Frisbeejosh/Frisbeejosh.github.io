@@ -32,5 +32,5 @@ navbar:
       href: https://github.com/Frisbeejosh       # CHANGE HERE 
 output:
   html_document:
-    theme: cosmo
+    theme: journal
     highlight: textmate
