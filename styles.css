@@ -22,3 +22,43 @@ p {
   flex: 1;              /* take up the remaining space */
   min-width: 300px;     /* so it doesn’t shrink too small */
 }
+
+/* 1) Navbar background + brand/link color */
+.navbar-inverse {
+  background-color:   #7a81c2;  /* your new primary */
+  border-color:       #7a81c2;
+}
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+/* 2) Primary buttons */
+.btn-primary {
+  background-color: #7a81c2;
+  border-color:     #7a81c2;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #7a81c2;
+  border-color:     #7a81c2;
+}
+
+/* 3) Panels, wells, badges (if you use them) */
+.panel-primary > .panel-heading,
+.well {
+  background-color: #7a81c2;
+  border-color:     #7a81c2;
+  color: #fff;
+}
+.badge {
+  background-color: #7a81c2;
+}
+
+/* 4) Links */
+a, a:visited {
+  color: #004080;
+}
+a:hover, a:focus {
+  color: #002244;
+}

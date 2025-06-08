@@ -1,5 +1,8 @@
 ---
 title: "About me"
+output:
+  html_document:
+  css: styles.css
 ---
 
 plant evolutionary biologist in the [Specht lab](https://blogs.cornell.edu/specht/).  
