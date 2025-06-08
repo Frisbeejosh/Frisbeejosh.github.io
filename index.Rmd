@@ -1,16 +1,12 @@
 ---
 title: "Joshua M. Felton"
-output: 
-  html_document:
-    theme: journal
-    highlight: zenburn
 ---
   
 # Introduction
 
-Hello, I'm Joshua M. Felton, a PhD student at Cornell University focused on phylogenetics and evolutionary biology. My research explores the intersection of mating systems, genetic diversity, and adaptation in epiphytic plants, particularly *Catopsis nutans*. I use genomic tools and field data to understand how reproductive strategies shape the evolution of plant species.
+Hello, I'm Joshua M. Felton, a PhD student at Cornell University focused on phylogenetics and evolutionary biology. My research explores the intersection of reproductive biology and adaptation in epiphytic plants, particularly *Catopsis nutans*.
 
-I am currently working on projects related to the phylogeny of *Catopsis*, exploring genetic structure across populations, and investigating the role of life history and breeding systems in shaping biodiversity.
+I am currently working on projects related to the phylogeny of *Catopsis*, exploring genetic structure across populations, and investigating the role of sexual and mating systems in shaping biodiversity.
 
 ![My GitHub Commits](https://ghchart.rshah.org/409ba5/Frisbeejosh)
 
