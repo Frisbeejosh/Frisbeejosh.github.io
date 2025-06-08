@@ -36,5 +36,5 @@ navbar:
 output:
   html_document:
     css: styles.css      # loading globaly
-    theme: journal
+    theme: simplex
     highlight: textmate
