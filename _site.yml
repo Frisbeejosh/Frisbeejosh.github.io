@@ -1,14 +1,15 @@
-name: "josh felton"                                # CHANGE HERE 
+name: "josh felton"
 output_dir: "."
+
 navbar:
-  title: "josh felton"                             # CHANGE HERE 
+  title: "josh felton"
   type: inverse
   left:
     - text: "home"
       icon: fa-home
       href: index.html
     - text: "about"
-      icon: fa-user 
+      icon: fa-user
       href: about.html
     - text: "research"
       menu:
@@ -22,15 +23,18 @@ navbar:
       href: scicomm.html
     - text: "blog"
       icon: fa-rss
-      href: https://Frisbeejosh.github.io/blog/  # CHANGE HERE OR DELETE ALL 3 LINES 
+      href: https://Frisbeejosh.github.io/blog/
   right:
     - text: "contact me"
       icon: fa-envelope-o
-      href: mailto:jmf425@cornell.edu                    # CHANGE HERE 
+      href: mailto:jmf425@cornell.edu
     - text: "github"
       icon: fa-github
-      href: https://github.com/Frisbeejosh       # CHANGE HERE 
+      href: https://github.com/Frisbeejosh
+
+# apply styles.css to every page
 output:
   html_document:
+    css: styles.css      # loading globaly
     theme: journal
     highlight: textmate

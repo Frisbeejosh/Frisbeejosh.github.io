@@ -1,0 +1,24 @@
+/* Make all your paragraphs a bit larger */
+p {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+
+/* Any extra tweaks for your iNat widget */
+.inat-widget { 
+  font-family: Georgia, serif;
+  padding: 10px;
+  line-height: 1;
+}
+
+.widget-row {
+  display: flex;
+  gap: 1rem;            /* space between them */
+  align-items: flex-start;
+  flex-wrap: wrap;      /* so it still wraps on really narrow screens */
+}
+.spotify-widget {
+  flex: 1;              /* take up the remaining space */
+  min-width: 300px;     /* so it doesn’t shrink too small */
+}
