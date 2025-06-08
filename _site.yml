@@ -35,6 +35,6 @@ navbar:
 # apply styles.css to every page
 output:
   html_document:
-    css: styles.css      # loading globaly
+    css: "styles.css"
     theme: simplex
     highlight: textmate
