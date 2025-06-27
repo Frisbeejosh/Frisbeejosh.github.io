@@ -1,15 +1,10 @@
-# WilliamKMLai.github.io
-Lai Lab website at Cornell.
+# Frisbeejosh.github.io
+Personal website.
 
 Page accessible at:
-https://williamkmlai.github.io/
+https://frisbeejosh.github.io
 
-From a web technology standpoint this is built using [jekyll](https://jekyllrb.com/). Even though there are other static site generators
-that can be deployed and hosted on GitHub, we chose [jekyll](https://jekyllrb.com/) as it is natively supported by GitHub, easy to learn,
-easy to integrate and configure DNS services, both GitHub and [jekyll](https://jekyllrb.com/) built using the same programming language
-[ruby](https://www.ruby-lang.org/en/) and also it is free to host among other things.
-
-> Note: Even though it is based on ruby, we will not be writing any code in ruby.
+forked from https://github.com/WilliamKMLai
 
 ### Dependencies
 
