@@ -4,91 +4,151 @@ title: About
 
 <style>
 /**/
-.introduction{display:inline-block; /*padding-right:10px;*/ padding-bottom:50px;}
-.profile_photo_text{float:left; width: 35%;}
-.introduction_text{padding-left:25px;float:right;width:65%}
-.download_link{padding-left:25px;float:right;width:65%}
-.photo_text{float:left; width:90%; font-size: 12px; }
-.link_text{float:left; width:90%; font-size: 14px; font-weight:bold;}
-.introduction_text p {font-size: 14px;width:100%;}
-/**/
-/**/
-.box{display: flex;vertical-align:top;}
-.title_year{width:10%;font-weight: bold; /*padding-left:30px;*/ color: black;}
-.Publications_text{font-size: 14px; padding-left:30px; width:90%;float:right;}
-/**/
-.footer{text-align: center;
-		margin: 60px;
-		}
+.introduction {
+  display: inline-block;
+  padding-bottom: 50px;
+}
+.profile_photo_text {
+  float: left;
+  width: 35%;
+}
+.introduction_text {
+  padding-left: 25px;
+  float: right;
+  width: 65%;
+}
+.download_link {
+  padding-left: 25px;
+  float: right;
+  width: 65%;
+}
+.photo_text {
+  float: left;
+  width: 90%;
+  font-size: 12px;
+}
+.link_text {
+  float: left;
+  width: 90%;
+  font-size: 14px;
+  font-weight: bold;
+}
+.introduction_text p {
+  font-size: 14px;
+  width: 100%;
+}
+.box {
+  display: flex;
+  vertical-align: top;
+}
+.title_year {
+  width: 10%;
+  font-weight: bold;
+  color: black;
+}
+.Publications_text {
+  font-size: 14px;
+  padding-left: 30px;
+  width: 90%;
+  float: right;
+}
+.footer {
+  text-align: center;
+  margin: 60px;
+}
+
+/* NEW STYLES FOR WIDGETS */
+.widget-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.inat-widget,
+.spotify-widget {
+  flex: 1 1 48%;
+}
 </style>
 
 <div class="introduction">
-	<div class="profile_photo_text">
-		<div class="images">
-		<img src="./assets/images/prof_pic.jpg" width="314" height="392" />
-		</div>
-		<div class="photo_text">
-			<p>phd candidate in the <a href="https://blogs.cornell.edu/specht/">specht lab</a>
-				</br>
-				section of plant biology and the l.h. bailey hortorium
-				</br>
-				cornell university</p>
-		</div>
-	</div>
-	<div class="introduction_text">
-			<h1>joshua m. felton</h1>
-
-			<P>plant evolutionary biologist. i’m interested in reproductive biology and use the neotropical family Bromeliaceae to investigate how sexual systems influence population dymanics, broadly looking to help contextualize how reproductive biology influences macroevoltuionary trends
-	    </P>
-	    </br>
-	    </style>
-<div class="inat-widget">
-    <div class="inat-widget-header">
-      <a href="https://www.inaturalist.org"><img alt="iNaturalist" src="https://www.inaturalist.org/assets/logo-small.png" /></a>  
+  <div class="profile_photo_text">
+    <div class="images">
+      <img src="./assets/images/prof_pic.jpg" width="314" height="392" />
     </div>
-  <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/josh_felton.widget?layout=large&limit=5&order=desc&order_by=observed_on"></script>
-  <table class="inat-footer">
-    <tr class="inat-user">
-        <td class="inat-user-image">
-          <a border="0" href="https://www.inaturalist.org/observations/josh_felton"><img class="usericon" src="https://static.inaturalist.org/attachments/users/icons/4237615/thumb.jpg?1657148778" /></a>
-        </td>
-      <td class="inat-value">
-        <strong>
-            <a href="https://www.inaturalist.org/observations/josh_felton">View josh_felton's observations »</a>
-        </strong>
-      </td>
-    </tr>
-  </table>
-</div>
-  <div class="spotify-widget">
-    <iframe
-      src="https://open.spotify.com/embed/playlist/0xH1RwmBILEqvDpouq4o0T"
-      width="100%" height="500" frameborder="0"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy">
-    </iframe>
-	</div>
-	<div class="download_link">
-		<a href="./assets/cv/FELTON_SPRING_25_CV.pdf" download>download cv</a>
-	</div>
+    <div class="photo_text">
+      <p>phd candidate in the <a href="https://blogs.cornell.edu/specht/">specht lab</a>
+        </br>
+        section of plant biology and the l.h. bailey hortorium
+        </br>
+        cornell university
+      </p>
+    </div>
+  </div>
+
+  <div class="introduction_text">
+    <h1>joshua m. felton</h1>
+
+    <p>
+      plant evolutionary biologist. i’m interested in reproductive biology and use the neotropical family Bromeliaceae to investigate how sexual systems influence population dynamics, broadly looking to help contextualize how reproductive biology influences macroevolutionary trends
+    </p>
+    </br>
+
+    <div class="widget-container">
+      <div class="inat-widget">
+        <div class="inat-widget-header">
+          <a href="https://www.inaturalist.org">
+            <img alt="iNaturalist" src="https://www.inaturalist.org/assets/logo-small.png" />
+          </a>
+        </div>
+        <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/josh_felton.widget?layout=large&limit=5&order=desc&order_by=observed_on"></script>
+        <table class="inat-footer">
+          <tr class="inat-user">
+            <td class="inat-user-image">
+              <a border="0" href="https://www.inaturalist.org/observations/josh_felton">
+                <img class="usericon" src="https://static.inaturalist.org/attachments/users/icons/4237615/thumb.jpg?1657148778" />
+              </a>
+            </td>
+            <td class="inat-value">
+              <strong>
+                <a href="https://www.inaturalist.org/observations/josh_felton">View josh_felton's observations »</a>
+              </strong>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="spotify-widget">
+        <iframe
+          src="https://open.spotify.com/embed/playlist/0xH1RwmBILEqvDpouq4o0T"
+          width="100%" height="500" frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+
+    <div class="download_link">
+      <a href="./assets/cv/FELTON_SPRING_25_CV.pdf" download>download cv</a>
+    </div>
+  </div>
 </div>
 
 <div class="Publications">
-	<h2>Publications</h2>
-	<a href="/publications">view more</a>
+  <h2>Publications</h2>
+  <a href="/publications">view more</a>
 
-	<div class="box">
-	<div class="title_year">
-		<p>2025</p>
-	</div>
-			<div class="Publications_text">
-				<ul>
-				</ul>
-			</div>
-	</div>
+  <div class="box">
+    <div class="title_year">
+      <p>2025</p>
+    </div>
+    <div class="Publications_text">
+      <ul>
+        <!-- Add publications here -->
+      </ul>
+    </div>
+  </div>
 
-<footer id="footer" class="footer" role="contentinfo">
-		<span>Copyright © 2025 Joshua M. Felton</span>
-</footer>
+  <footer id="footer" class="footer" role="contentinfo">
+    <span>Copyright © 2025 Joshua M. Felton</span>
+  </footer>
 </div>
-</div><!-- .overflow-container -->
