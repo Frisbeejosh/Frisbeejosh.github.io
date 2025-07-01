@@ -1,8 +1,8 @@
-- name: About
+- name: about
   link: /
-- name: Research
+- name: research
   link: /research.html
-- name: Teaching
+- name: teaching
   link: /teaching.html
-- name: Blog
+- name: blog
   link: https://frisbeejosh.github.io/blog/
