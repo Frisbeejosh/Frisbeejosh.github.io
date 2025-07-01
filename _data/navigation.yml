@@ -4,7 +4,7 @@
   link: /research.html
 - name: teaching
   link: /teaching.html
-- name: blog
-  link: https://frisbeejosh.github.io/blog/
 - name: sci-comm
   link: /sci-comm.html
+- name: blog
+  link: https://frisbeejosh.github.io/blog/
