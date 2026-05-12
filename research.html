@@ -1,57 +1,457 @@
----
-title: Research
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-<div class="Research">
-  <header class="entry-header ast-no-thumbnail ast-no-meta">
-    <div class="entry-content clear" itemprop="text">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-      <p class="intro" style="font-size:1.2em; line-height:1.6; color:#333; margin-bottom:1.5rem;">
-        My research investigates how <strong>sexual systems</strong> influence speciation in plants, 
-        using the epiphytic bromeliad genus <i>Catopsis</i> as a model for studying 
-        the drivers of dioecy and its ecological correlates.
-      </p>
+    :root {
+      --cream: #f7f4ef;
+      --ink: #1c1a17;
+      --ink-light: #5a5750;
+      --ink-faint: #9a9590;
+      --moss: #3d5a3e;
+      --moss-light: #e8ede8;
+      --rule: rgba(28,26,23,0.12);
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
 
-      <h2 id="research-nn" class="section-title">Research Focus: <i>Catopsis</i></h2>
+    html { background: var(--cream); }
 
-      <div class="wp-block-media-text alignwide is-stacked-on-mobile is-vertically-aligned-top" 
-           style="grid-template-columns:25% auto; gap: 1.5rem;">
+    body {
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        <!-- Image -->
-        <figure class="wp-block-media-text__media">
-          <img src="../assets/images/nutans_fak.jpeg" alt="Catopsis in fakahatchee strand state park" 
-               style="border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1);">
-          <figcaption style="font-size:0.85em; color:#555;">
-            <i>Catopsis nutans</i> in fakahatchee strand state park 
+    .page-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: end;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 3.5rem;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--moss);
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: 3.2rem;
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--ink);
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--moss);
+    }
+
+    .hero-right {
+      padding-bottom: 0.25rem;
+    }
+
+    .hero-intro {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--ink-light);
+    }
+
+    .hero-intro strong {
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 1.5rem;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      padding: 4px 12px;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      color: var(--ink-light);
+      background: transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .tag:hover {
+      border-color: var(--moss);
+      color: var(--moss);
+    }
+
+    .section {
+      margin-bottom: 4rem;
+      animation: fadeUp 0.7s ease both;
+      animation-delay: 0.15s;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      white-space: nowrap;
+    }
+
+    .section-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .section-title {
+      font-family: var(--serif);
+      font-size: 1.75rem;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: 1.75rem;
+    }
+
+    .section-title em { font-style: italic; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .research-fig {
+      position: sticky;
+      top: 2rem;
+    }
+
+    .research-fig img {
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .fig-caption {
+      font-family: var(--serif);
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--ink-faint);
+      line-height: 1.5;
+      margin-top: 0.6rem;
+      padding-top: 0.6rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .prose p {
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--ink-light);
+      margin-bottom: 1.1rem;
+    }
+
+    .prose p:last-child { margin-bottom: 0; }
+
+    .prose em { font-style: italic; }
+
+    .pull-quote {
+      margin: 1.5rem 0;
+      padding: 1.25rem 1.5rem;
+      background: var(--moss-light);
+      border-left: 3px solid var(--moss);
+      border-radius: 0 4px 4px 0;
+    }
+
+    .pull-quote p {
+      font-family: var(--serif) !important;
+      font-size: 1.05rem !important;
+      font-style: italic;
+      line-height: 1.65 !important;
+      color: var(--ink) !important;
+      margin-bottom: 0.4rem !important;
+    }
+
+    .pull-quote cite {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-style: normal;
+      color: var(--moss);
+      letter-spacing: 0.03em;
+    }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 3.5rem 0;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 680px) {
+      .hero { grid-template-columns: 1fr; gap: 1.5rem; }
+      .hero-title { font-size: 2.4rem; }
+      .two-col { grid-template-columns: 1fr; }
+      .research-fig { position: static; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-wrapper">
+
+    <div class="hero">
+      <div class="hero-left">
+        <p class="eyebrow">Doctoral Research &middot; Cornell University</p>
+        <h1 class="hero-title">Sexual systems<br>&amp; speciation in<br><em>Catopsis</em></h1>
+      </div>
+
+      <div class="hero-right">
+        <p class="hero-intro">
+          My research integrates <strong>evolutionary biology, population genomics, and plant systematics</strong>
+          to understand how reproductive strategies evolve across fragmented tropical landscapes.
+          Using epiphytic bromeliads as model systems, I investigate the demographic and ecological
+          drivers of sexual system evolution and their consequences for diversification and species boundaries.
+        </p>
+
+        <div class="tag-row">
+          <span class="tag">Reproductive biology</span>
+          <span class="tag">Bromeliad systematics</span>
+          <span class="tag">Population genomics</span>
+          <span class="tag">Sexual system evolution</span>
+          <span class="tag">Epiphytes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-label">Research overview</span>
+        <div class="section-rule"></div>
+      </div>
+
+      <h2 class="section-title">Evolutionary transitions in plant reproductive systems</h2>
+
+      <div class="prose">
+        <p>
+          My research examines how demographic history, geographic isolation, and environmental heterogeneity
+          shape the evolution of plant reproductive systems. I am particularly interested in transitions between
+          hermaphroditism and dioecy, and how these shifts influence population persistence, lineage divergence,
+          and the formation of species boundaries.
+        </p>
+
+        <p>
+          Epiphytic plants provide a powerful framework for studying these questions because they often occur
+          in spatially fragmented canopy habitats where dispersal, mate availability, and pollinator reliability
+          may vary across landscapes. In these systems, reproductive strategies may reflect both contemporary
+          ecological conditions and deeper histories of colonization, isolation, and range expansion.
+        </p>
+
+        <p>
+          Across my dissertation, I combine field botany, herbarium-based systematics, population genomics,
+          and landscape evolutionary analyses to understand how reproductive diversity is generated and
+          maintained in Neotropical plant lineages.
+        </p>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-label">Research focus</span>
+        <div class="section-rule"></div>
+      </div>
+
+      <h2 class="section-title">The genus <em>Catopsis</em></h2>
+
+      <div class="two-col">
+        <figure class="research-fig">
+          <img src="../assets/images/nutans_fak.jpeg" alt="Catopsis nutans in Fakahatchee Strand State Park">
+          <figcaption class="fig-caption">
+            <em>Catopsis nutans</em> in Fakahatchee Strand State Park, Florida
           </figcaption>
         </figure>
 
-        <div class="wp-block-media-text__content">
-          <p class="has-normal-font-size">
-            <i>Catopsis</i> Griseb. is an epiphytic genus in the subfamily <i>Tillandsioideae</i>. 
-            Its greatest diversity lies in Mexico, though species range across the Caribbean, Central America, 
-            and the Brazilian Shield of South America.
+        <div class="prose">
+          <p>
+            <em>Catopsis</em> Griseb. is an epiphytic genus in the bromeliad subfamily
+            <em>Tillandsioideae</em>. Its greatest diversity lies in Mexico, though species range across
+            the Caribbean, Central America, and the Brazilian Shield of South America.
           </p>
 
-          <p class="has-normal-font-size">
-            Remarkably, <i>Catopsis</i> is one of the few bromeliad lineages with dioecious species—a rarity within the family. 
-            Elsewhere, dioecy is documented only in <i>Hechtia</i> (Hechtioideae), the monotypic 
-            <i>Androlepis skinneri</i>, and <i>Aechmea mariae-reginae</i> (both Bromelioideae). 
+          <p>
+            Remarkably, <em>Catopsis</em> is one of the few bromeliad lineages with dioecious species,
+            a rarity within the family. Elsewhere, dioecy is documented only in <em>Hechtia</em>
+            (Hechtioideae), the monotypic <em>Androlepis skinneri</em>, and
+            <em>Aechmea mariae-reginae</em> (both Bromelioideae).
           </p>
 
-          <blockquote style="border-left: 4px solid #aaa; padding-left: 1rem; font-style:italic; color:#444;">
-            Both <i>Hechtia</i> and <i>Catopsis</i> share Mexico as their diversity center, while the two Bromelioideae species are found in Central America 
-            (Benzing, 2000).
-          </blockquote>
+          <div class="pull-quote">
+            <p>
+              Both <em>Hechtia</em> and <em>Catopsis</em> share Mexico as their diversity center,
+              while the two Bromelioideae species are found in Central America.
+            </p>
+            <cite>Benzing, 2000</cite>
+          </div>
 
-          <p class="has-normal-font-size">
-            Despite this intriguing distribution, dioecious bromeliads remain 
-            underexplored in studies of genetic diversity and reproductive biology, with only a handful of focused works 
-            (Ramírez-Morillo et al., 2005; Cascante-Marín et al., 2020).
+          <p>
+            Despite this intriguing distribution, dioecious bromeliads remain underexplored in studies of
+            genetic diversity, reproductive biology, and evolutionary ecology. This makes <em>Catopsis</em>
+            an especially useful system for testing how reproductive strategies evolve across geography.
           </p>
         </div>
       </div>
-
     </div>
-  </header>
-</div>
+
+    <hr class="section-divider">
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-label">Dissertation project</span>
+        <div class="section-rule"></div>
+      </div>
+
+      <h2 class="section-title">Sexual system variation in <em>Catopsis nutans</em></h2>
+
+      <div class="prose">
+        <p>
+          A major focus of my dissertation is <em>Catopsis nutans</em>, a widespread Neotropical epiphyte
+          that exhibits striking geographic variation in sexual system. Populations in Mexico and northern
+          Central America are primarily dioecious, with separate male and female individuals, while populations
+          near the northern and southern range margins are hermaphroditic.
+        </p>
+
+        <p>
+          This distribution raises a central evolutionary question: did hermaphroditism evolve once, followed by
+          geographic expansion, or has it evolved repeatedly in isolated or marginal populations? I test whether
+          sexual system variation reflects recent demographic isolation, historical founder events, or adaptation
+          to environmental heterogeneity.
+        </p>
+
+        <p>
+          By comparing genomic structure across the range of <em>C. nutans</em>, I aim to determine whether
+          hermaphroditic populations represent independently evolving lineages, recent responses to reduced
+          connectivity, or environmentally structured populations within a broader species complex.
+        </p>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-label">Integrative approaches</span>
+        <div class="section-rule"></div>
+      </div>
+
+      <h2 class="section-title">Linking genomics, landscapes, and herbarium collections</h2>
+
+      <div class="prose">
+        <p>
+          My work combines extensive field sampling with herbarium-based taxonomy and genome-scale sequencing.
+          Current sampling spans Florida, Belize, Panama, Costa Rica, Mexico, and additional regions of Central
+          America, with each collection designed to link reproductive observations, geographic locality, tissue
+          samples, and voucher specimens.
+        </p>
+
+        <p>
+          Using whole-genome resequencing, I investigate patterns of population structure, demographic history,
+          and lineage divergence. I use coalescent-based phylogenetics to infer relationships among populations,
+          landscape genomic methods to estimate spatial connectivity, and demographic modeling to compare
+          alternative histories of isolation, bottlenecks, expansion, and migration.
+        </p>
+
+        <p>
+          I also integrate environmental datasets, including climate and habitat variables, to ask whether
+          genomic variation associated with sexual systems is better explained by landscape connectivity,
+          environmental heterogeneity, or the interaction between the two.
+        </p>
+
+        <p>
+          Whenever possible, genomic datasets are linked to herbarium voucher specimens deposited in national
+          and institutional collections. This ensures that genomic data remain connected to verifiable plant
+          material and supports future systematic and taxonomic work in <em>Catopsis</em>.
+        </p>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="section">
+      <div class="section-header">
+        <span class="section-label">Broader significance</span>
+        <div class="section-rule"></div>
+      </div>
+
+      <h2 class="section-title">Reproductive evolution in fragmented tropical habitats</h2>
+
+      <div class="prose">
+        <p>
+          Understanding why sexual systems shift across landscapes has implications beyond <em>Catopsis</em>.
+          In fragmented or recently colonized habitats, hermaphroditism may provide reproductive assurance
+          when mates or pollinators are limited. Alternatively, dioecy may persist where populations are larger,
+          more connected, or where outcrossing provides long-term fitness advantages.
+        </p>
+
+        <p>
+          Distinguishing among these possibilities matters for interpreting the evolutionary status of marginal
+          populations. Hermaphroditic populations could represent recent demographic decline, long-standing
+          founder lineages, or independent evolutionary transitions with conservation and taxonomic significance.
+        </p>
+
+        <p>
+          More broadly, my research uses bromeliads to ask how plant reproductive systems respond to dispersal
+          limitation, habitat fragmentation, and environmental change. These questions are especially important
+          for epiphytes, orchids, bromeliads, and other canopy specialists whose populations may be increasingly
+          isolated in changing tropical forests.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
