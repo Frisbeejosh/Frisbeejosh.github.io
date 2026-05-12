@@ -1,159 +1,335 @@
 ---
 title: About
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<style>
-/**/
-.introduction {
-  display: inline-block;
-  padding-bottom: 50px;
-}
-.profile_photo_text {
-  float: left;
-  width: 35%;
-}
-.introduction_text {
-  padding-left: 25px;
-  float: right;
-  width: 65%;
-}
-.download_link {
-  padding-left: 25px;
-  float: right;
-  width: 65%;
-}
-.photo_text {
-  float: left;
-  width: 90%;
-  font-size: 12px;
-}
-.link_text {
-  float: left;
-  width: 90%;
-  font-size: 14px;
-  font-weight: bold;
-}
-.introduction_text p {
-  font-size: 14px;
-  width: 100%;
-}
-.box {
-  display: flex;
-  vertical-align: top;
-}
-.title_year {
-  width: 10%;
-  font-weight: bold;
-  color: black;
-}
-.Publications_text {
-  font-size: 14px;
-  padding-left: 30px;
-  width: 90%;
-  float: right;
-}
-.footer {
-  text-align: center;
-  margin: 60px;
-}
+    :root {
+      --cream: #f7f4ef;
+      --ink: #1c1a17;
+      --ink-light: #5a5750;
+      --ink-faint: #9a9590;
+      --moss: #3d5a3e;
+      --moss-light: #e8ede8;
+      --rule: rgba(28,26,23,0.12);
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
 
-.inat-widget {
-  margin-top: 20px;
-}
+    html { background: var(--cream); }
 
-.spotify-widget {
-  width: 100%;
-  margin-top: 30px;
-}
-</style>
+    body {
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-<div class="introduction">
-  <div class="profile_photo_text">
-    <div class="images">
-      <img src="./assets/images/prof_pic.jpg" width="314" height="392" />
-    </div>
-    <div class="photo_text">
-      <p>phd candidate in the <a href="https://blogs.cornell.edu/specht/">specht lab</a>
-        </br>
-        section of plant biology and the l.h. bailey hortorium
-        </br>
+    .page-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3rem;
+      align-items: start;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 3.5rem;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .hero-left { display: flex; flex-direction: column; gap: 1.25rem; }
+
+    .profile-img {
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .photo-caption {
+      font-family: var(--serif);
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--ink-faint);
+      line-height: 1.5;
+      padding-top: 0.6rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .photo-caption a { color: var(--moss); text-decoration: none; }
+    .photo-caption a:hover { text-decoration: underline; }
+
+    .hero-right { padding-top: 0.25rem; }
+
+    .hero-name {
+      font-family: var(--serif);
+      font-size: 3rem;
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-bio {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--ink-light);
+    }
+
+    .hero-bio em { font-style: italic; }
+
+    .inat-strip {
+      margin-top: 1.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .inat-label {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 0.75rem;
+    }
+
+    .spotify-wrap {
+      margin-top: 1.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .spotify-label {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 0.75rem;
+    }
+
+    .spotify-wrap iframe { border-radius: 4px; display: block; }
+
+    .section {
+      margin-bottom: 4rem;
+      animation: fadeUp 0.7s ease both;
+      animation-delay: 0.15s;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      white-space: nowrap;
+    }
+
+    .section-rule { flex: 1; height: 1px; background: var(--rule); }
+
+    .pub-group { margin-bottom: 2rem; }
+
+    .pub-year-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .pub-year {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--moss);
+      white-space: nowrap;
+    }
+
+    .pub-year-rule { flex: 1; height: 1px; background: var(--rule); }
+
+    .pub-list { list-style: none; display: flex; flex-direction: column; gap: 1.1rem; }
+
+    .pub-item {
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--ink-light);
+      padding-left: 1rem;
+      border-left: 2px solid var(--moss-light);
+    }
+
+    .pub-item em { font-style: italic; }
+
+    .pub-item a { color: var(--moss); text-decoration: none; }
+    .pub-item a:hover { text-decoration: underline; }
+
+    .pub-link {
+      display: inline-block;
+      margin-top: 0.4rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.03em;
+    }
+
+    .view-more {
+      display: inline-block;
+      margin-top: 1.25rem;
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--moss);
+      text-decoration: none;
+      border-bottom: 1px solid var(--moss);
+      padding-bottom: 2px;
+      transition: opacity 0.2s;
+    }
+
+    .view-more:hover { opacity: 0.7; }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 3.5rem 0;
+    }
+
+    footer {
+      text-align: center;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: var(--ink-faint);
+      padding-top: 2rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 680px) {
+      .page-wrapper { padding: 3rem 1.25rem 5rem; }
+      .hero { grid-template-columns: 1fr; gap: 1.75rem; }
+      .hero-name { font-size: 2.4rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <div class="hero">
+    <div class="hero-left">
+      <img class="profile-img" src="./assets/images/prof_pic.jpg" alt="Joshua M. Felton">
+      <p class="photo-caption">
+        phd candidate, <a href="https://blogs.cornell.edu/specht/">specht lab</a><br>
+        section of plant biology &amp; l.h. bailey hortorium<br>
         cornell university
       </p>
-    </div>
 
-    <!-- Move iNat widget here under photo and credentials -->
-    <div class="inat-widget">
-      <div class="inat-widget-header">
-        <a href="https://www.inaturalist.org">
-          <img alt="iNaturalist" src="https://www.inaturalist.org/assets/logo-small.png" />
-        </a>
+      <div class="inat-strip">
+        <p class="inat-label">iNaturalist observations</p>
+        <div>
+          <a href="https://www.inaturalist.org">
+            <img alt="iNaturalist" src="https://www.inaturalist.org/assets/logo-small.png" style="height:22px;">
+          </a>
+        </div>
+        <script type="text/javascript" charset="utf-8"
+          src="https://www.inaturalist.org/observations/josh_felton.widget?layout=large&limit=5&order=desc&order_by=observed_on">
+        </script>
+        <table style="margin-top:0.5rem;">
+          <tr>
+            <td><a href="https://www.inaturalist.org/observations/josh_felton">
+              <img src="https://static.inaturalist.org/attachments/users/icons/4237615/thumb.jpg?1657148778" style="width:28px;border-radius:50%;">
+            </a></td>
+            <td style="padding-left:0.5rem;font-size:0.78rem;">
+              <a href="https://www.inaturalist.org/observations/josh_felton" style="color:var(--moss);text-decoration:none;">View observations »</a>
+            </td>
+          </tr>
+        </table>
       </div>
-      <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/josh_felton.widget?layout=large&limit=5&order=desc&order_by=observed_on"></script>
-      <table class="inat-footer">
-        <tr class="inat-user">
-          <td class="inat-user-image">
-            <a border="0" href="https://www.inaturalist.org/observations/josh_felton">
-              <img class="usericon" src="https://static.inaturalist.org/attachments/users/icons/4237615/thumb.jpg?1657148778" />
-            </a>
-          </td>
-          <td class="inat-value">
-            <strong>
-              <a href="https://www.inaturalist.org/observations/josh_felton">View josh_felton's observations »</a>
-            </strong>
-          </td>
-        </tr>
-      </table>
+    </div>
+
+    <div class="hero-right">
+      <h1 class="hero-name">joshua m. felton</h1>
+      <p class="hero-bio">
+        Plant evolutionary biologist interested in reproductive biology. I use the Neotropical family
+        <em>Bromeliaceae</em> to investigate how sexual systems influence population dynamics,
+        broadly working to contextualize how reproductive biology shapes macroevolutionary trends.
+      </p>
+
+      <div class="spotify-wrap">
+        <p class="spotify-label">currently listening</p>
+        <iframe
+          src="https://open.spotify.com/embed/playlist/0xH1RwmBILEqvDpouq4o0T"
+          width="100%" height="380" frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy">
+        </iframe>
+      </div>
     </div>
   </div>
 
-  <div class="introduction_text">
-    <h1>joshua m. felton</h1>
-
-    <p>
-      plant evolutionary biologist. i’m interested in reproductive biology and use the neotropical family Bromeliaceae to investigate how sexual systems influence population dynamics, broadly looking to help contextualize how reproductive biology influences macroevolutionary trends
-    </p>
-    
-    <!-- Spotify widget now matches width of text -->
-    <div class="spotify-widget">
-      <iframe
-        src="https://open.spotify.com/embed/playlist/0xH1RwmBILEqvDpouq4o0T"
-        width="100%" height="500" frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-      </iframe>
+  <div class="section">
+    <div class="section-header">
+      <span class="section-label">Publications</span>
+      <div class="section-rule"></div>
     </div>
-  </div>
-</div>
 
-<div class="Publications">
-  <h2>Publications</h2>
-  <a href="/publications">view more</a>
-
-  <div class="box">
-    <div class="title_year">
-      <p>2025</p>
-    </div>
-    <div class="Publications_text">
-      <ul>
-        <li>
-          <strong>Felton, J.M.</strong>, Jelley, C., Harden, J., Scholten, J.T., Graber, L., Heeney, M., Rizzieri, Y.C., Specht, C.D., Landis, J.B. (2025) 
-          The power to resolve relationships: Identifying incongruence and precision of reduced-representation and genome-wide data in phylogenomics and population genomics. 
-          <em>bioRxiv</em> <span style="color:#555;">[Preprint]</span>. 
-          <a href="https://doi.org/10.1101/2025.07.09.663802" target="_blank">doi:10.1101/2025.07.09.663802</a>
+    <div class="pub-group">
+      <div class="pub-year-row">
+        <span class="pub-year">2025</span>
+        <div class="pub-year-rule"></div>
+      </div>
+      <ul class="pub-list">
+        <li class="pub-item">
+          <strong>Felton, J.M.</strong>, Jelley, C., Harden, J., Scholten, J.T., Graber, L., Heeney, M., Rizzieri, Y.C., Specht, C.D., Landis, J.B. (2025)
+          The power to resolve relationships: Identifying incongruence and precision of reduced-representation and genome-wide data in phylogenomics and population genomics.
+          <em>bioRxiv</em> <span style="color:var(--ink-faint);">[Preprint]</span>.<br>
+          <a class="pub-link" href="https://doi.org/10.1101/2025.07.09.663802" target="_blank">doi:10.1101/2025.07.09.663802 ↗</a>
         </li>
-        <li>
-          Landis, J.B., Hufnagel, E., <strong>Felton, J.M.</strong>, Harden, J.J., Almeida, D., Specht, C.D. (2025) 
-          AVITI library prep miniaturization and combining with Illumina data for phylogenomic and population genomic analyses. 
-          <em>bioRxiv</em> <span style="color:#555;">[Preprint]</span>. 
-          <a href="https://doi.org/10.1101/2025.07.30.667782" target="_blank">doi:10.1101/2025.07.30.667782</a>
+        <li class="pub-item">
+          Landis, J.B., Hufnagel, E., <strong>Felton, J.M.</strong>, Harden, J.J., Almeida, D., Specht, C.D. (2025)
+          AVITI library prep miniaturization and combining with Illumina data for phylogenomic and population genomic analyses.
+          <em>bioRxiv</em> <span style="color:var(--ink-faint);">[Preprint]</span>.<br>
+          <a class="pub-link" href="https://doi.org/10.1101/2025.07.30.667782" target="_blank">doi:10.1101/2025.07.30.667782 ↗</a>
         </li>
       </ul>
     </div>
+
+    <a class="view-more" href="/publications">View all publications</a>
   </div>
-</div>
 
+  <hr class="section-divider">
 
-  <footer id="footer" class="footer" role="contentinfo">
+  <footer>
     <span>Copyright © 2025 Joshua M. Felton</span>
   </footer>
+
 </div>
+</body>
+</html>
