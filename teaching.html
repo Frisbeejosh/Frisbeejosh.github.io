@@ -1,39 +1,254 @@
 ---
 title: Teaching
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teaching</title>
-    <style>
-        .logos {
-            text-align: center; /* Center the content inside the logos container */
-        }
-        .access_logo {
-            display: inline-block; /* Ensures the logo div doesn't take full width */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --cream: #f7f4ef;
+      --ink: #1c1a17;
+      --ink-light: #5a5750;
+      --ink-faint: #9a9590;
+      --moss: #3d5a3e;
+      --moss-light: #e8ede8;
+      --moss-mid: #c2d0c2;
+      --rule: rgba(28,26,23,0.12);
+
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+    }
+
+    html { background: var(--cream); }
+
+    body {
+      font-family: var(--sans);
+      color: var(--ink);
+      background: var(--cream);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    /* ── Section headers (matches photography page) ── */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .gallery-grid + .section-header,
+    .section-body + .section-header,
+    .philosophy-block + .section-header,
+    .darkroom-block + .section-header {
+      margin-top: 4rem;
+    }
+
+    .section-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      white-space: nowrap;
+    }
+
+    .section-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    /* ── Intro block ── */
+    .intro-block {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .intro-block img {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 5/6;
+    }
+
+    .intro-block p {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--ink-light);
+    }
+
+    /* ── Philosophy block ── */
+    .philosophy-block {
+      position: relative;
+      background: var(--moss);
+      border-radius: 6px;
+      padding: 3rem 3.5rem;
+      overflow: hidden;
+      animation: fadeUp 0.7s ease both;
+      animation-delay: 0.1s;
+    }
+
+    /* Decorative large quotation mark */
+    .philosophy-block::before {
+      content: '\201C';
+      font-family: var(--serif);
+      font-size: 14rem;
+      line-height: 1;
+      color: rgba(255,255,255,0.07);
+      position: absolute;
+      top: -1.5rem;
+      left: 1.5rem;
+      pointer-events: none;
+    }
+
+    .philosophy-block .phil-label {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--moss-mid);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .philosophy-block p {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.8;
+      color: #f7f4ef;
+      position: relative; /* above the decorative glyph */
+    }
+
+    .philosophy-block p + p {
+      margin-top: 1.2rem;
+    }
+
+    /* ── Darkroom block ── */
+    .darkroom-block {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 2.5rem;
+      align-items: start;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .darkroom-block .text p {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--ink-light);
+    }
+
+    .darkroom-block .text p + p {
+      margin-top: 1rem;
+    }
+
+    .darkroom-block .darkroom-img {
+      width: 100%;
+      border-radius: 4px;
+      display: block;
+      object-fit: cover;
+      aspect-ratio: 5/6;
+      /* subtle dark-border to evoke the darkroom */
+      box-shadow: 0 0 0 1px rgba(28,26,23,0.15);
+    }
+
+    /* ── Shared ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 680px) {
+      .page-wrapper { padding: 3rem 1.25rem 5rem; }
+
+      .intro-block,
+      .darkroom-block {
+        grid-template-columns: 1fr;
+      }
+
+      .darkroom-block .darkroom-img {
+        order: -1;
+        aspect-ratio: 4/3;
+      }
+
+      .philosophy-block {
+        padding: 2rem 1.75rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
+<div class="page-wrapper">
 
-<div class="Teaching">
-    <header class="entry-header ast-no-thumbnail ast-no-meta">
-        <div class="entry-content clear" itemprop="text">
-            <div class="entry-content clear" itemprop="text">
-                <div class="wp-block-media-text alignwide is-stacked-on-mobile is-vertically-aligned-top" style="grid-template-columns:20% auto">
-                    <div class="wp-block-media-text__content">
-                        <p class="has-normal-font-size">as an alumnus from a predominately undergraduate institution, I understand what strong higher education looks like. unfortunately, teaching is often not stressed, or seemed like a lesser academic career path. I aim to create spaces in the botanical sciences that nurture connection, creativity, curiosity, and success in students, thereby empowering the next generation of scientists to be mindful, collaborative, and courageous in their questioning.
-<img src="assets/images/guest_lecture.JPG" alt="OBE202 field botany guest lecture on major colorado plant familes and groups" width="250" height="300">
-                        </p>
-                    </div>
-                </div>
-              </div>
-            </div>
-    </header>
+  <!-- ── Intro ──────────────────────────────────────────── -->
+  <div class="section-header">
+    <span class="section-label">Teaching</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="intro-block">
+    <img src="assets/images/guest_lecture.JPG" alt="OBE202 field botany guest lecture on major Colorado plant families and groups">
+    <p>as an alumnus from a predominately undergraduate institution, I understand what strong higher education looks like. unfortunately, teaching is often not stressed, or seen as a lesser academic career path. I aim to create spaces in the botanical sciences that nurture connection, creativity, curiosity, and success in students — empowering the next generation of scientists to be mindful, collaborative, and courageous in their questioning.</p>
+  </div>
+
+
+  <!-- ── Teaching philosophy ────────────────────────────── -->
+  <div class="section-header" style="margin-top:4rem;">
+    <span class="section-label">philosophy</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="philosophy-block">
+    <span class="phil-label">teaching philosophy</span>
+    <p>I believe learning happens best in community, rooted in curiosity, the beginners mind and observation. My role as an instructor is similar to a gardner; to cultivate the conditions where curiosity can thrive."]</p>
+  </div>
+
+
+  <!-- ── Community darkroom ─────────────────────────────── -->
+  <div class="section-header" style="margin-top:4rem;">
+    <span class="section-label">image lab community darkroom</span>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="darkroom-block">
+    <div class="text">
+      <p>as co-manager of the image lab community darkroom at <a href="https://thesoilfactory.org">the soil factory</a>, a place where scientists can be artists and artists can be scientists. I run montly workshops on how to process black and white film for folks of any age and of all skill levels</p>
+    </div>
+    <img class="darkroom-img" src="assets/images/in-darkroom.jpeg" alt="we thrive and learn through horizontal knowledge transfer in the image lab">
+  </div>
+
+
 </div>
-
 </body>
 </html>
