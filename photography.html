@@ -10,7 +10,6 @@ title: Photography
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
@@ -33,9 +32,7 @@ title: Photography
       --sans: 'DM Sans', system-ui, sans-serif;
     }
 
-    html {
-      background: var(--cream);
-    }
+    html { background: var(--cream); }
 
     body {
       font-family: var(--sans);
@@ -50,34 +47,19 @@ title: Photography
       padding: 4rem 2rem 6rem;
     }
 
-    .hero {
-      padding-bottom: 3rem;
-      border-bottom: 1px solid var(--rule);
-      margin-bottom: 3.5rem;
-      animation: fadeUp 0.7s ease both;
-    }
-
-    .hero-title {
-      font-family: var(--serif);
-      font-size: 3rem;
-      font-weight: 300;
-      line-height: 1.1;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-sub {
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      font-weight: 300;
-      color: var(--ink-faint);
-      font-style: italic;
-    }
+    /* ── Section headers ── */
 
     .section-header {
       display: flex;
       align-items: center;
       gap: 1rem;
       margin-bottom: 2rem;
+    }
+
+    /* Every header except the very first gets top breathing room */
+    .section-header + .gallery-grid + .section-header,
+    .gallery-grid + .section-header {
+      margin-top: 3.5rem;
     }
 
     .section-label {
@@ -94,6 +76,8 @@ title: Photography
       height: 1px;
       background: var(--rule);
     }
+
+    /* ── Gallery ── */
 
     .gallery-grid {
       display: grid;
@@ -120,30 +104,20 @@ title: Photography
       transition: transform 0.4s ease;
     }
 
-    .gallery-item:hover img {
-      transform: scale(1.04);
-    }
+    .gallery-item:hover img { transform: scale(1.04); }
 
     .gallery-item .overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(28,26,23,0.55) 0%,
-        transparent 50%
-      );
-
+      background: linear-gradient(to top, rgba(28,26,23,0.55) 0%, transparent 50%);
       opacity: 0;
       transition: opacity 0.3s ease;
-
       display: flex;
       align-items: flex-end;
       padding: 0.75rem;
     }
 
-    .gallery-item:hover .overlay {
-      opacity: 1;
-    }
+    .gallery-item:hover .overlay { opacity: 1; }
 
     .overlay-title {
       font-family: var(--serif);
@@ -153,7 +127,7 @@ title: Photography
       line-height: 1.3;
     }
 
-    /* Lightbox */
+    /* ── Lightbox ── */
 
     .lightbox {
       display: none;
@@ -166,9 +140,7 @@ title: Photography
       padding: 2rem;
     }
 
-    .lightbox.open {
-      display: flex;
-    }
+    .lightbox.open { display: flex; }
 
     .lightbox-inner {
       position: relative;
@@ -198,431 +170,221 @@ title: Photography
       position: absolute;
       top: -2.5rem;
       right: 0;
-
       background: none;
       border: none;
-
       color: #f7f4ef;
       font-size: 1.5rem;
       cursor: pointer;
-
       opacity: 0.7;
       transition: opacity 0.2s;
     }
 
-    .lightbox-close:hover {
-      opacity: 1;
-    }
+    .lightbox-close:hover { opacity: 1; }
 
     .lightbox-nav {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-
       background: none;
       border: 1px solid rgba(247,244,239,0.25);
-
       color: #f7f4ef;
-
       width: 40px;
       height: 40px;
       border-radius: 50%;
-
       cursor: pointer;
       font-size: 1.1rem;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       transition: background 0.2s;
     }
 
-    .lightbox-nav:hover {
-      background: rgba(247,244,239,0.1);
-    }
-
-    .lightbox-nav.prev {
-      left: -3.5rem;
-    }
-
-    .lightbox-nav.next {
-      right: -3.5rem;
-    }
+    .lightbox-nav:hover { background: rgba(247,244,239,0.1); }
+    .lightbox-nav.prev { left: -3.5rem; }
+    .lightbox-nav.next { right: -3.5rem; }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(16px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 680px) {
-
-      .page-wrapper {
-        padding: 3rem 1.25rem 5rem;
-      }
-
-      .hero-title {
-        font-size: 2.4rem;
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .lightbox-nav.prev {
-        left: -0.5rem;
-      }
-
-      .lightbox-nav.next {
-        right: -0.5rem;
-      }
+      .page-wrapper { padding: 3rem 1.25rem 5rem; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .lightbox-nav.prev { left: -0.5rem; }
+      .lightbox-nav.next { right: -0.5rem; }
     }
   </style>
 </head>
 
 <body>
-
 <div class="page-wrapper">
+
+  <!-- ── Belize ── -->
   <div class="section-header">
     <span class="section-label">Belize</span>
     <div class="section-rule"></div>
   </div>
 
-  <div class="gallery-grid" id="gallery">
-
-    <div class="gallery-item" data-index="0">
+  <div class="gallery-grid" data-gallery="belize">
+    <div class="gallery-item" data-src="assets/images/john-climbing.jpg" data-caption="Mountain Pine Ridge Forest Reserve">
       <img src="assets/images/john-climbing.jpg" alt="john climbing in Mountain Pine Ridge Forest Reserve">
-
-      <div class="overlay">
-        <span class="overlay-title">Mountain Pine Ridge Forest Reserve</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">Mountain Pine Ridge Forest Reserve</span></div>
     </div>
-
-    <div class="gallery-item" data-index="1">
+    <div class="gallery-item" data-src="assets/images/the-girls-pose.jpg" data-caption="St. Margaret's">
       <img src="assets/images/the-girls-pose.jpg" alt="collecting data">
-
-      <div class="overlay">
-        <span class="overlay-title">St. Margaret's</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">St. Margaret's</span></div>
     </div>
-
-    <div class="gallery-item" data-index="2">
+    <div class="gallery-item" data-src="assets/images/ella-boss.jpg" data-caption="Community Valley">
       <img src="assets/images/ella-boss.jpg" alt="talking epiphytes">
-
-      <div class="overlay">
-        <span class="overlay-title">Community Valley</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">Community Valley</span></div>
     </div>
-
-    <div class="gallery-item" data-index="3">
+    <div class="gallery-item" data-src="assets/images/ella-jorge.jpg" data-caption="Caves Branch Valley">
       <img src="assets/images/ella-jorge.jpg" alt="having fun at lunch">
-
-      <div class="overlay">
-        <span class="overlay-title">Caves Branch Valley</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">Caves Branch Valley</span></div>
     </div>
-
-    <div class="gallery-item" data-index="4">
+    <div class="gallery-item" data-src="assets/images/wilfredo-kamille.jpg" data-caption="St. Margaret's">
       <img src="assets/images/wilfredo-kamille.jpg" alt="collecting data">
-
-      <div class="overlay">
-        <span class="overlay-title">St. Margaret's</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">St. Margaret's</span></div>
     </div>
-
-    <div class="gallery-item" data-index="5">
+    <div class="gallery-item" data-src="assets/images/the-lads.jpg" data-caption="University of Belize">
       <img src="assets/images/the-lads.jpg" alt="the lads">
-
-      <div class="overlay">
-        <span class="overlay-title">University of Belize</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">University of Belize</span></div>
     </div>
-
-    <div class="gallery-item" data-index="6">
+    <div class="gallery-item" data-src="assets/images/paco-thinking.jpg" data-caption="Hummingbird Highway">
       <img src="assets/images/paco-thinking.jpg" alt="can we collect epiphytes?">
-
-      <div class="overlay">
-        <span class="overlay-title">Hummingbird Highway</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">Hummingbird Highway</span></div>
     </div>
-
-    <div class="gallery-item" data-index="7">
+    <div class="gallery-item" data-src="assets/images/girls-lunch.jpg" data-caption="St. Margaret's">
       <img src="assets/images/girls-lunch.jpg" alt="lunch time!">
-
-      <div class="overlay">
-        <span class="overlay-title">St. Margaret's</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">St. Margaret's</span></div>
     </div>
-
-    <div class="gallery-item" data-index="8">
+    <div class="gallery-item" data-src="assets/images/tree-belize.jpg" data-caption="Hershey Fields">
       <img src="assets/images/tree-belize.jpg" alt="the citrus fields">
-
-      <div class="overlay">
-        <span class="overlay-title">Hershey Fields</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">Hershey Fields</span></div>
     </div>
-
   </div>
 
-
+  <!-- ── Florida ── -->
   <div class="section-header">
     <span class="section-label">Florida</span>
     <div class="section-rule"></div>
   </div>
 
-  <div class="gallery-grid" id="gallery">
-
-    <div class="gallery-item" data-index="0">
+  <div class="gallery-grid" data-gallery="florida">
+    <div class="gallery-item" data-src="assets/images/into-slew.jpg" data-caption="Fakahatchee Strand">
       <img src="assets/images/into-slew.jpg" alt="into the slough">
-
-      <div class="overlay">
-        <span class="overlay-title">Fakahatchee Strand</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">Fakahatchee Strand</span></div>
     </div>
-
-    <div class="gallery-item" data-index="1">
+    <div class="gallery-item" data-src="assets/images/morning-station.jpg" data-caption="Fakahatchee Strand">
       <img src="assets/images/morning-station.jpg" alt="morning at the station">
-
-      <div class="overlay">
-        <span class="overlay-title">Fakahatchee Strand</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">Fakahatchee Strand</span></div>
     </div>
-
-    <div class="gallery-item" data-index="2">
+    <div class="gallery-item" data-src="assets/images/population-8.jpg" data-caption="US Route 41">
       <img src="assets/images/population-8.jpg" alt="just alligators">
-
-      <div class="overlay">
-        <span class="overlay-title">US Route 41</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">US Route 41</span></div>
     </div>
-
-    <div class="gallery-item" data-index="3">
+    <div class="gallery-item" data-src="assets/images/birds.jpg" data-caption="Fakahatchee Strand">
       <img src="assets/images/birds.jpg" alt="dusk my first day in FL">
-
-      <div class="overlay">
-        <span class="overlay-title">Fakahatchee Strand</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">Fakahatchee Strand</span></div>
     </div>
-
-    <div class="gallery-item" data-index="4">
+    <div class="gallery-item" data-src="assets/images/selby.jpg" data-caption="Selby Gardens">
       <img src="assets/images/selby.jpg" alt="Catopsis at selby">
-
-      <div class="overlay">
-        <span class="overlay-title">Selby Gardens</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">Selby Gardens</span></div>
     </div>
-
-    <div class="gallery-item" data-index="5">
+    <div class="gallery-item" data-src="assets/images/cole-atv.jpg" data-caption="Fakahatchee Strand">
       <img src="assets/images/cole-atv.jpg" alt="a morning before our survey">
-
-      <div class="overlay">
-        <span class="overlay-title">Fakahatchee Strand</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">Fakahatchee Strand</span></div>
     </div>
-
-    <div class="gallery-item" data-index="6">
+    <div class="gallery-item" data-src="assets/images/shawn-greenhouse.jpg" data-caption="Selby Gardens">
       <img src="assets/images/shawn-greenhouse.jpg" alt="behind the scenes at selby">
-
-      <div class="overlay">
-        <span class="overlay-title">Selby Gardens</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">Selby Gardens</span></div>
     </div>
-
-    <div class="gallery-item" data-index="7">
+    <div class="gallery-item" data-src="assets/images/cole-portrait.jpg" data-caption="Fakahatchee Strand">
       <img src="assets/images/cole-portrait.jpg" alt="Cole Lutrell">
-
-      <div class="overlay">
-        <span class="overlay-title">Fakahatchee Strand</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">Fakahatchee Strand</span></div>
     </div>
-
-    <div class="gallery-item" data-index="8">
+    <div class="gallery-item" data-src="assets/images/nutans-florida.jpg" data-caption="Fakahatchee Strand">
       <img src="assets/images/nutans-florida.jpg" alt="my first sighting!">
-
-      <div class="overlay">
-        <span class="overlay-title">Fakahatchee Strand</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">Fakahatchee Strand</span></div>
     </div>
-
   </div>
-  
-  
+
+  <!-- ── Herbaria ── -->
   <div class="section-header">
     <span class="section-label">Herbaria</span>
     <div class="section-rule"></div>
   </div>
 
-  <div class="gallery-grid" id="gallery">
-
-    <div class="gallery-item" data-index="0">
+  <div class="gallery-grid" data-gallery="herbaria">
+    <div class="gallery-item" data-src="assets/images/selby-stacks.jpg" data-caption="SEL">
       <img src="assets/images/selby-stacks.jpg" alt="selby stacks">
-
-      <div class="overlay">
-        <span class="overlay-title">SEL</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">SEL</span></div>
     </div>
-
-    <div class="gallery-item" data-index="1">
+    <div class="gallery-item" data-src="assets/images/harvard-1.jpg" data-caption="HUH">
       <img src="assets/images/harvard-1.jpg" alt="getting into the specimens">
-
-      <div class="overlay">
-        <span class="overlay-title">HUH</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">HUH</span></div>
     </div>
-
-    <div class="gallery-item" data-index="2">
+    <div class="gallery-item" data-src="assets/images/david-huh.jpg" data-caption="HUH">
       <img src="assets/images/david-huh.jpg" alt="he's a botanist">
-
-      <div class="overlay">
-        <span class="overlay-title">HUH</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">HUH</span></div>
     </div>
-
-    <div class="gallery-item" data-index="3">
+    <div class="gallery-item" data-src="assets/images/selby-books.jpg" data-caption="SEL">
       <img src="assets/images/selby-books.jpg" alt="all the stuff in a herbarium">
-
-      <div class="overlay">
-        <span class="overlay-title">SEL</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">SEL</span></div>
     </div>
-
-    <div class="gallery-item" data-index="4">
+    <div class="gallery-item" data-src="assets/images/john-mount.jpg" data-caption="BRH">
       <img src="assets/images/john-mount.jpg" alt="john mounting">
-
-      <div class="overlay">
-        <span class="overlay-title">BRH</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">BRH</span></div>
     </div>
-
-    <div class="gallery-item" data-index="5">
+    <div class="gallery-item" data-src="assets/images/denver.jpg" data-caption="BRH">
       <img src="assets/images/denver.jpg" alt="Denver Cayetano">
-
-      <div class="overlay">
-        <span class="overlay-title">BRH</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">BRH</span></div>
     </div>
-
-    <div class="gallery-item" data-index="6">
+    <div class="gallery-item" data-src="assets/images/navia.jpg" data-caption="SEL">
       <img src="assets/images/navia.jpg" alt="bruce holst's interest at the moment">
-
-      <div class="overlay">
-        <span class="overlay-title">SEL</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">SEL</span></div>
     </div>
-
-    <div class="gallery-item" data-index="7">
-      <img src="assets/images/archives-selby.jpg" alt="theres alot more than plants in herbaria">
-
-      <div class="overlay">
-        <span class="overlay-title">SEL</span>
-      </div>
+    <div class="gallery-item" data-src="assets/images/archives-selby.jpg" data-caption="SEL">
+      <img src="assets/images/archives-selby.jpg" alt="there's a lot more than plants in herbaria">
+      <div class="overlay"><span class="overlay-title">SEL</span></div>
     </div>
-
-    <div class="gallery-item" data-index="8">
+    <div class="gallery-item" data-src="assets/images/huh-bromeliaceae.jpg" data-caption="HUH">
       <img src="assets/images/huh-bromeliaceae.jpg" alt="i love HUH's cabinets">
-
-      <div class="overlay">
-        <span class="overlay-title">HUH</span>
-      </div>
+      <div class="overlay"><span class="overlay-title">HUH</span></div>
     </div>
-
   </div>
-
 
 </div>
 
-<!-- Lightbox -->
-
+<!-- ── Lightbox ── -->
 <div class="lightbox" id="lightbox">
-
   <div class="lightbox-inner">
-
     <button class="lightbox-close" id="lb-close">✕</button>
-
-    <button class="lightbox-nav prev" id="lb-prev">
-      &#8592;
-    </button>
-
-    <button class="lightbox-nav next" id="lb-next">
-      &#8594;
-    </button>
-
+    <button class="lightbox-nav prev" id="lb-prev">&#8592;</button>
+    <button class="lightbox-nav next" id="lb-next">&#8594;</button>
     <img id="lb-img" src="" alt="">
-
     <p class="lightbox-caption" id="lb-caption"></p>
-
   </div>
-
 </div>
 
 <script>
+  // Build a flat array of all photos from data attributes at page load.
+  // Each item stores src, caption, and which sibling group it belongs to
+  // so arrow-key navigation stays within the same section.
 
-  const photos = [
-    {
-      src: 'assets/images/john-climbing.jpg',
-      title: 'Fakahatchee Strand, FL'
-    },
+  const lb      = document.getElementById('lightbox');
+  const lbImg   = document.getElementById('lb-img');
+  const lbCap   = document.getElementById('lb-caption');
 
-    {
-      src: 'assets/images/the-girls-pose.jpg',
-      title: 'Catopsis nutans'
-    },
-
-    {
-      src: 'assets/images/ella-boss.jpg',
-      title: 'Costa Rica'
-    },
-
-    {
-      src: 'assets/images/ella-jorge.jpg',
-      title: 'Belize'
-    },
-
-    {
-      src: 'assets/images/selby.jpg',
-      title: 'Tillandsioideae'
-    },
-
-    {
-      src: 'assets/images/cole-atv.jpg',
-      title: 'Panama'
-    },
-
-    {
-      src: 'assets/images/paco-thinking.jpg',
-      title: 'Panama'
-    },
-
-    {
-      src: 'assets/images/girls-lunch.jpg',
-      title: 'Panama'
-    },
-
-    {
-      src: 'assets/images/tree-belize.jpg',
-      title: 'Belize'
-    }
-  ];
-
+  let sectionPhotos = []; // photos in the currently-open section
   let current = 0;
 
-  const lb = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lb-img');
-  const lbCap = document.getElementById('lb-caption');
-
-  function openLightbox(i) {
-    current = i;
-
-    lbImg.src = photos[i].src;
-    lbCap.textContent = photos[i].title;
-
+  function openLightbox(items, index) {
+    sectionPhotos = items;
+    current = index;
+    lbImg.src         = sectionPhotos[current].src;
+    lbCap.textContent = sectionPhotos[current].caption;
     lb.classList.add('open');
   }
 
@@ -631,52 +393,35 @@ title: Photography
   }
 
   function navigate(dir) {
-
-    current = (
-      current + dir + photos.length
-    ) % photos.length;
-
-    lbImg.src = photos[current].src;
-    lbCap.textContent = photos[current].title;
+    current = (current + dir + sectionPhotos.length) % sectionPhotos.length;
+    lbImg.src         = sectionPhotos[current].src;
+    lbCap.textContent = sectionPhotos[current].caption;
   }
 
-  document.querySelectorAll('.gallery-item').forEach(el => {
+  // Wire up each gallery independently
+  document.querySelectorAll('.gallery-grid').forEach(grid => {
+    const items = Array.from(grid.querySelectorAll('.gallery-item')).map(el => ({
+      src:     el.dataset.src,
+      caption: el.dataset.caption
+    }));
 
-    el.addEventListener('click', () => {
-      openLightbox(+el.dataset.index);
+    grid.querySelectorAll('.gallery-item').forEach((el, i) => {
+      el.addEventListener('click', () => openLightbox(items, i));
     });
-
   });
 
-  document.getElementById('lb-close')
-    .addEventListener('click', closeLightbox);
+  document.getElementById('lb-close').addEventListener('click', closeLightbox);
+  document.getElementById('lb-prev').addEventListener('click', () => navigate(-1));
+  document.getElementById('lb-next').addEventListener('click', () => navigate(1));
 
-  document.getElementById('lb-prev')
-    .addEventListener('click', () => navigate(-1));
-
-  document.getElementById('lb-next')
-    .addEventListener('click', () => navigate(1));
-
-  lb.addEventListener('click', e => {
-
-    if (e.target === lb) {
-      closeLightbox();
-    }
-
-  });
+  lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
 
   document.addEventListener('keydown', e => {
-
     if (!lb.classList.contains('open')) return;
-
-    if (e.key === 'Escape') closeLightbox();
-
-    if (e.key === 'ArrowLeft') navigate(-1);
-
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowLeft')  navigate(-1);
     if (e.key === 'ArrowRight') navigate(1);
-
   });
-
 </script>
 
 </body>
