@@ -95,10 +95,32 @@ title: About
     .hero-bio em { font-style: italic; }
 
     .inat-strip {
-      margin-top: 1.75rem;
-      padding-top: 1.25rem;
+      margin-top: 1.25rem;
+      padding-top: 1rem;
       border-top: 1px solid var(--rule);
+      overflow: hidden;
     }
+
+    .inat-strip table {
+      width: 100% !important;
+      max-width: 100% !important;
+      border-collapse: collapse;
+    }
+
+    .inat-strip img {
+      max-width: 100%;
+    }
+
+    .inat-link {
+      margin-bottom: 0.75rem;
+      font-size: 0.78rem;
+    }
+
+    .inat-link a {
+      color: var(--moss);
+      text-decoration: none;
+    }
+
 
     .inat-label {
       font-family: var(--sans);
@@ -109,7 +131,7 @@ title: About
       color: var(--ink-faint);
       margin-bottom: 0.75rem;
     }
-
+    
     .spotify-wrap {
       margin-top: 1.75rem;
       padding-top: 1.25rem;
@@ -250,21 +272,18 @@ title: About
         section of plant biology &amp; l.h. bailey hortorium<br>
         cornell university
       </p>
-      <div class="inat-strip">
+        <div class="inat-strip">
         <p class="inat-label">iNaturalist observations</p>
+
+        <p class="inat-link">
+          <a href="https://www.inaturalist.org/observations/josh_felton">
+            View observations »
+          </a>
+        </p>
+
         <script type="text/javascript" charset="utf-8"
           src="https://www.inaturalist.org/observations/josh_felton.widget?layout=large&limit=5&order=desc&order_by=observed_on">
         </script>
-        <table style="margin-top:0.5rem;">
-          <tr>
-            <td><a href="https://www.inaturalist.org/observations/josh_felton">
-              <img src="https://static.inaturalist.org/attachments/users/icons/4237615/thumb.jpg?1657148778" style="width:28px;border-radius:50%;">
-            </a></td>
-            <td style="padding-left:0.5rem;font-size:0.78rem;">
-              <a href="https://www.inaturalist.org/observations/josh_felton" style="color:var(--moss);text-decoration:none;">View observations »</a>
-            </td>
-          </tr>
-        </table>
       </div>
     </div>
 
